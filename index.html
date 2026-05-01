@@ -17,49 +17,116 @@
             transform: translateY(-2px);
             background: rgba(255, 255, 255, 0.06);
         }
+
+        /* Header */
+        .store-header {
+            max-width: 42rem;
+            margin: 0 auto;
+            padding: 28px 16px 20px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .store-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .store-name {
+            font-size: 1.35rem;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+            line-height: 1;
+        }
+        .store-name .kiarka { color: #FFD700; }
+        .store-name .store-word { color: #50C878; }
+        .store-tagline {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #50C878;
+            opacity: 0.85;
+        }
+        .store-badge {
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #FFD700 0%, #50C878 100%);
+            color: #030712;
+            font-size: 0.55rem;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        .divider {
+            max-width: 42rem;
+            margin: 0 auto 16px auto;
+            padding: 0 16px;
+        }
+        .divider-line {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #FFD700 30%, #50C878 70%, transparent);
+            opacity: 0.4;
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
 
-    <div class="max-w-2xl mx-auto grid grid-cols-2 gap-4">
-
-    <a href="/mieayamoye" class="bento-item col-span-2 h-44 rounded-[2rem] overflow-hidden relative group shadow-md">
-        <img src="mieayamoye/mao.jpg" alt="Mie Ayam Oye" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-5 flex flex-col justify-end">
-            <h3 class="text-base font-black uppercase text-white group-hover:text-red-500 transition-colors">Mie Ayam Oye</h3>
-            <p class="text-[8px] text-gray-300 uppercase font-bold tracking-[0.2em]">Heritage Since 1997</p>
+    <!-- HEADER -->
+    <div class="store-header">
+        <div class="store-brand">
+            <div class="store-name">
+                <span class="kiarka">KIARKA</span> <span class="store-word">STORE</span>
+            </div>
+            <div class="store-tagline">Bantu UMKM Level Up</div>
         </div>
-    </a>
+        <div class="store-badge">UMKM Digital Center</div>
+    </div>
 
-    <a href="/pecelleleazam" class="bento-item col-span-1 h-40 rounded-[2rem] overflow-hidden relative group shadow-md">
-        <img src="pecelleleazam/ple.jpg" alt="Pecel Lele Azam" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end">
-            <h3 class="text-xs font-black uppercase text-white group-hover:text-red-500 transition-colors">Pecel Lele & Soto Azam</h3>
-            <p class="text-[7px] text-gray-400 uppercase font-bold tracking-widest">4 macam Sambal</p>
-        </div>
-    </a>
+    <div class="divider">
+        <div class="divider-line"></div>
+    </div>
 
-    <a href="/eskelapaguss" class="bento-item col-span-1 h-40 rounded-[2rem] overflow-hidden relative group shadow-md">
-        <img src="eskelapaguss/ekm.jpg" alt="Es Kelapa Muda Gus" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end">
-            <h3 class="text-xs font-black uppercase text-white group-hover:text-red-500 transition-colors">Kelapa Gus</h3>
-            <p class="text-[7px] text-gray-400 uppercase font-bold tracking-widest">Fresh & Milky</p>
-        </div>
-    </a>
+    <!-- BENTO GRID -->
+    <div class="max-w-2xl mx-auto grid grid-cols-2 gap-4 px-4">
+
+        <a href="/mieayamoye" class="bento-item col-span-2 h-44 rounded-[2rem] overflow-hidden relative group shadow-md">
+            <img src="mieayamoye/mao.jpg" alt="Mie Ayam Oye" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-5 flex flex-col justify-end">
+                <h3 class="text-base font-black uppercase text-white group-hover:text-red-500 transition-colors">Mie Ayam Oye</h3>
+                <p class="text-[8px] text-gray-300 uppercase font-bold tracking-[0.2em]">Heritage Since 1997</p>
+            </div>
+        </a>
+
+        <a href="/pecelleleazam" class="bento-item col-span-1 h-40 rounded-[2rem] overflow-hidden relative group shadow-md">
+            <img src="pecelleleazam/ple.jpg" alt="Pecel Lele Azam" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end">
+                <h3 class="text-xs font-black uppercase text-white group-hover:text-red-500 transition-colors">Pecel Lele & Soto Azam</h3>
+                <p class="text-[7px] text-gray-400 uppercase font-bold tracking-widest">4 macam Sambal</p>
+            </div>
+        </a>
+
+        <a href="/eskelapaguss" class="bento-item col-span-1 h-40 rounded-[2rem] overflow-hidden relative group shadow-md">
+            <img src="eskelapaguss/ekm.jpg" alt="Es Kelapa Muda Gus" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end">
+                <h3 class="text-xs font-black uppercase text-white group-hover:text-red-500 transition-colors">Kelapa Gus</h3>
+                <p class="text-[7px] text-gray-400 uppercase font-bold tracking-widest">Fresh & Milky</p>
+            </div>
+        </a>
 
     </div>
+
     <footer class="mt-20 text-center border-t border-white/5 pt-8 pb-12">
         <p class="text-[9px] text-gray-600 uppercase tracking-[0.4em] font-bold">Managed & Developed by</p>
-        
         <a href="https://kiarka.id/bagus/" class="inline-block mt-3 group">
             <span class="text-xs font-black text-green-500 uppercase tracking-widest border-b border-green-500/30 group-hover:border-green-500 transition-all">
                 BAGUS →
             </span>
         </a>
-        
         <p class="text-[8px] text-gray-700 uppercase tracking-widest mt-8">© 2026 KIARKA STORE by twinstech</p>
     </footer>
 
 </body>
 </html>
-  
