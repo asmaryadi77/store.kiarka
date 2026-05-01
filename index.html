@@ -3,83 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiarka Store - Managed by BAGUS</title>
+    <title>Kiarka Store - UMKM Digital Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #050505; color: #fafafa; }
-        .unit-card {
-            background: linear-gradient(145deg, #0f0f0f, #151515);
-            border: 1px solid #1f1f1f;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        body { background-color: #030712; color: #f9fafb; font-family: system-ui, -apple-system, sans-serif; }
+        .bento-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .unit-card:hover {
-            border-color: #22c55e;
-            transform: scale(1.02);
-            box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.2);
+        .bento-item:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.06);
         }
     </style>
 </head>
-<body class="font-sans antialiased border-t-4 border-green-600">
+<body class="font-sans antialiased">
 
-    <div class="max-w-md mx-auto px-6 py-16">
-        
-        <header class="mb-12">
-            <h1 class="text-3xl font-black tracking-tighter uppercase italic">
-                BAGUS <span class="text-green-600">STORE</span>
+    <header class="w-full bg-black border-b border-white/5 py-12 text-center">
+        <div class="max-w-md mx-auto px-6">
+            <h1 class="text-4xl font-black tracking-tighter uppercase italic text-white">
+                KIARKA <span class="text-red-600">STORE</span>
             </h1>
-            <p class="text-[10px] text-gray-500 uppercase tracking-[0.5em] mt-2 font-bold leading-none">
-                Bantosan Garut Squad Unit
+            <p class="text-[10px] text-gray-500 uppercase tracking-[0.6em] mt-3 font-semibold">
+                Digital Managed Units Center
             </p>
-            <div class="h-[1px] w-12 bg-green-600 mt-6"></div>
-        </header>
+            <div class="h-[1px] w-12 bg-red-600 mt-6 mx-auto"></div>
+        </div>
+    </header>
 
-        <div class="space-y-4">
-            
-            <a href="https://twinstech.kiarka.id" class="unit-card p-6 rounded-[2rem] block group">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h2 class="text-lg font-black uppercase tracking-tight group-hover:text-green-500 transition-colors">Twinstech</h2>
-                        <p class="text-[10px] text-gray-500 mt-1 uppercase font-semibold">Cloud & Digital Infrastructure</p>
-                    </div>
-                    <span class="bg-white/5 p-2 rounded-full text-xs text-gray-400">01</span>
-                </div>
-            </a>
-
-            <a href="/mieayam" class="unit-card p-6 rounded-[2rem] block group">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h2 class="text-lg font-black uppercase tracking-tight group-hover:text-green-500 transition-colors">F&B Unit</h2>
-                        <p class="text-[10px] text-gray-500 mt-1 uppercase font-semibold">Managed Culinary Supply</p>
-                    </div>
-                    <span class="bg-white/5 p-2 rounded-full text-xs text-gray-400">02</span>
-                </div>
-            </a>
-
-            <a href="https://garu7.hamb4allaah.my.id" class="unit-card p-6 rounded-[2rem] block group">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h2 class="text-lg font-black uppercase tracking-tight group-hover:text-green-500 transition-colors">GARU7 Service</h2>
-                        <p class="text-[10px] text-gray-500 mt-1 uppercase font-semibold">Local Logistics & Transport</p>
-                    </div>
-                    <span class="bg-white/5 p-2 rounded-full text-xs text-gray-400">03</span>
-                </div>
-            </a>
-
+    <main class="max-w-md mx-auto px-6 py-12">
+        
+        <div class="mb-8">
+            <h2 class="text-xs uppercase text-gray-400 font-bold tracking-widest">Active Partnerships (UMKM)</h2>
+            <div class="w-full h-[1px] bg-white/5 mt-3"></div>
         </div>
 
-        <footer class="mt-24 pt-10 border-t border-white/5">
-            <div class="flex justify-between items-end">
-                <div>
-                    <p class="text-[8px] text-gray-600 uppercase tracking-widest font-bold">Part of Ecosystem</p>
-                    <p class="text-xs font-black text-white mt-1">KIARKA DIGITAL</p>
+        <div class="grid grid-cols-2 gap-4">
+            
+            <a href="/mieayamoye" class="bento-item col-span-1 p-6 rounded-[2rem] flex flex-col justify-between group">
+                <div class="flex flex-col gap-1">
+                    <span class="bg-white/5 w-10 h-10 rounded-full flex items-center justify-center text-xs text-gray-400 group-hover:bg-red-950 transition-colors">01</span>
+                    <h3 class="text-xl font-black uppercase text-white mt-4 group-hover:text-red-500 transition-colors">
+                        Mie Ayam Oye
+                    </h3>
+                    <p class="text-[10px] text-gray-500 uppercase font-semibold">Culinary Partner</p>
                 </div>
-                <a href="https://kiarka.id" class="text-[10px] bg-white text-black px-4 py-2 rounded-full font-black uppercase tracking-tighter hover:bg-green-600 hover:text-white transition-all">
-                    Back to HQ
+                <span class="text-2xl text-gray-600 group-hover:text-white transition-all mt-6">→</span>
+            </a>
+
+            <div class="col-span-1 grid grid-rows-2 gap-4">
+                
+                <a href="/pecelleleazam" class="bento-item p-6 rounded-[2rem] flex items-center justify-between group">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase text-white group-hover:text-red-500 transition-colors">
+                            Pecel Lele Azam
+                        </h3>
+                        <p class="text-[8px] text-gray-600 uppercase font-semibold">Food Supplier</p>
+                    </div>
+                    <span class="text-xl text-gray-600 group-hover:text-white transition-all">→</span>
                 </a>
+
+                <a href="/eskelapaguss" class="bento-item p-6 rounded-[2rem] flex items-center justify-between group">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase text-white group-hover:text-red-500 transition-colors">
+                            Kelapa Muda Gus
+                        </h3>
+                        <p class="text-[8px] text-gray-600 uppercase font-semibold">Beverage Partner</p>
+                    </div>
+                    <span class="text-xl text-gray-600 group-hover:text-white transition-all">→</span>
+                </a>
+                
             </div>
-        </footer>
+            
+        </div>
 
     </div>
+    <footer class="mt-20 text-center border-t border-white/5 pt-8 pb-12">
+        <p class="text-[9px] text-gray-600 uppercase tracking-[0.4em] font-bold">Managed & Developed by</p>
+        
+        <a href="https://kiarka.id/bagus/" class="inline-block mt-3 group">
+            <span class="text-xs font-black text-green-500 uppercase tracking-widest border-b border-green-500/30 group-hover:border-green-500 transition-all">
+                BAGUS →
+            </span>
+        </a>
+        
+        <p class="text-[8px] text-gray-700 uppercase tracking-widest mt-8">© 2026 KIARKA STORE by twinstech</p>
+    </footer>
 
 </body>
 </html>
+ 
