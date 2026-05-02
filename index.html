@@ -17,8 +17,6 @@
             transform: translateY(-2px);
             background: rgba(255, 255, 255, 0.06);
         }
-
-        /* Header */
         .store-header {
             max-width: 42rem;
             margin: 0 auto;
@@ -28,53 +26,29 @@
             justify-content: space-between;
             gap: 12px;
         }
-        .store-brand {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-        .store-name {
-            font-size: 1.35rem;
-            font-weight: 900;
-            letter-spacing: 0.04em;
-            line-height: 1;
-        }
+        .store-brand { display: flex; flex-direction: column; gap: 2px; }
+        .store-name { font-size: 1.35rem; font-weight: 900; letter-spacing: 0.04em; line-height: 1; }
         .store-name .kiarka { color: #FFD700; }
         .store-name .store-word { color: #50C878; }
-        .store-tagline {
-            font-size: 0.62rem;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: #50C878;
-            opacity: 0.85;
-        }
-        .store-badge {
-            flex-shrink: 0;
-            background: linear-gradient(135deg, #FFD700 0%, #50C878 100%);
-            color: #030712;
-            font-size: 0.55rem;
-            font-weight: 900;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            padding: 5px 10px;
+        .store-tagline { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #50C878; opacity: 0.85; }
+        .store-badge { flex-shrink: 0; background: linear-gradient(135deg, #FFD700 0%, #50C878 100%); color: #030712; font-size: 0.55rem; font-weight: 900; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 10px; border-radius: 20px; }
+        .divider { max-width: 42rem; margin: 0 auto 16px auto; padding: 0 16px; }
+        .divider-line { height: 1px; background: linear-gradient(to right, transparent, #FFD700 30%, #50C878 70%, transparent); opacity: 0.4; }
+        .jam-badge {
+            background: rgba(0,0,0,0.55);
+            backdrop-filter: blur(4px);
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            padding: 3px 9px;
             border-radius: 20px;
-        }
-        .divider {
-            max-width: 42rem;
-            margin: 0 auto 16px auto;
-            padding: 0 16px;
-        }
-        .divider-line {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #FFD700 30%, #50C878 70%, transparent);
-            opacity: 0.4;
+            border: 1px solid rgba(255,255,255,0.15);
         }
     </style>
 </head>
 <body class="font-sans antialiased">
 
-    <!-- HEADER -->
     <div class="store-header">
         <div class="store-brand">
             <div class="store-name">
@@ -89,44 +63,62 @@
         <div class="divider-line"></div>
     </div>
 
-    <!-- BENTO GRID -->
-    <div class="max-w-2xl mx-auto grid grid-cols-2 gap-4">
+    <div class="max-w-2xl mx-auto grid grid-cols-2 gap-4 px-4">
 
-    <a href="/mieayamoye" class="bento-item col-span-2 h-44 rounded-[2rem] overflow-hidden relative group shadow-md">
-        <img src="mieayamoye/mao.jpg" alt="Mie Ayam Oye" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-5 flex flex-col justify-end">
-            <h3 class="text-base font-black uppercase text-white group-hover:text-red-500 transition-colors">Mie Ayam Oye</h3>
-            <p class="text-[8px] text-gray-300 uppercase font-bold tracking-[0.2em]">Heritage Since 1997 •📍Tarogong Kidul</p>
-        </div>
-    </a>
+        <a href="/mieayamoye" class="bento-item col-span-2 h-44 rounded-[2rem] overflow-hidden relative group shadow-md">
+            <img src="mieayamoye/mao.jpg" alt="Mie Ayam Oye" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-5 flex flex-col justify-between">
+                <div class="flex justify-end">
+                    <span class="jam-badge">🕙 10.00 – 22.00</span>
+                </div>
+                <div>
+                    <h3 class="text-base font-black uppercase text-white group-hover:text-red-500 transition-colors">Mie Ayam Oye</h3>
+                    <p class="text-[8px] text-gray-300 uppercase font-bold tracking-[0.2em]">Heritage Since 1997 • 📍 Tarogong Kidul</p>
+                </div>
+            </div>
+        </a>
 
-    <a href="/pecelleleazam" class="bento-item col-span-1 h-40 rounded-[2rem] overflow-hidden relative group shadow-md">
-        <img src="pecelleleazam/ple.jpg" alt="Pecel Lele Azam" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end">
-            <h3 class="text-xs font-black uppercase text-white group-hover:text-red-500 transition-colors">Pecel Lele & Soto Azam</h3>
-            <p class="text-[7px] text-gray-400 uppercase font-bold tracking-widest">4 Macam Sambal.📍Tarogong Kidul</p>
-        </div>
-    </a>
+        <a href="/pecelleleazam" class="bento-item col-span-1 h-40 rounded-[2rem] overflow-hidden relative group shadow-md">
+            <img src="pecelleleazam/ple.jpg" alt="Pecel Lele Azam" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-between">
+                <div class="flex justify-end">
+                    <span class="jam-badge">🕓 16.00 – 23.00</span>
+                </div>
+                <div>
+                    <h3 class="text-xs font-black uppercase text-white group-hover:text-red-500 transition-colors">Pecel Lele & Soto Azam</h3>
+                    <p class="text-[7px] text-gray-400 uppercase font-bold tracking-widest">4 Macam Sambal • 📍 Tarogong Kidul</p>
+                </div>
+            </div>
+        </a>
 
-    <a href="/eskelapamudagus" class="bento-item col-span-1 h-40 rounded-[2rem] overflow-hidden relative group shadow-md">
-        <img src="eskelapaguss/ekm.jpg" alt="Es Kelapa Muda Gus" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end">
-            <h3 class="text-xs font-black uppercase text-white group-hover:text-red-500 transition-colors">Es Kelapa Kang Gus</h3>
-            <p class="text-[7px] text-gray-400 uppercase font-bold tracking-widest">Fresh & Milky •📍Tarogong Kidul</p>
-        </div>
-    </a>
+        <a href="/eskelapamudagus" class="bento-item col-span-1 h-40 rounded-[2rem] overflow-hidden relative group shadow-md">
+            <img src="eskelapaguss/ekm.jpg" alt="Es Kelapa Muda Gus" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-between">
+                <div class="flex justify-end">
+                    <span class="jam-badge">🕙 10.00 – 17.30</span>
+                </div>
+                <div>
+                    <h3 class="text-xs font-black uppercase text-white group-hover:text-red-500 transition-colors">Es Kelapa Kang Gus</h3>
+                    <p class="text-[7px] text-gray-400 uppercase font-bold tracking-widest">Fresh & Milky • 📍 Tarogong Kidul</p>
+                </div>
+            </div>
+        </a>
 
-    <a href="/lumpiabasahnazzrul" class="bento-item col-span-2 h-40 rounded-[2rem] overflow-hidden relative group shadow-md border-2 border-red-500/20">
-        <img src="lumpiabasahnazzrul/lbn.jpg" alt="Lumpia Basah" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-5 flex flex-col justify-end">
-            <div class="absolute top-4 right-4 bg-red-600 text-white text-[7px] font-black px-2 py-1 rounded-full uppercase tracking-widest">New Menu</div>
-            
-            <h3 class="text-base font-black uppercase text-white group-hover:text-red-500 transition-colors">Lumpia Basah Nazzrul</h3>
-            <p class="text-[8px] text-gray-300 uppercase font-bold tracking-[0.2em]">Legit & Gurih •📍Tarogong Kidul</p>
-        </div>
-    </a>
+        <a href="/lumpiabasahnazzrul" class="bento-item col-span-2 h-40 rounded-[2rem] overflow-hidden relative group shadow-md border-2 border-red-500/20">
+            <img src="lumpiabasahnazzrul/lbn.jpg" alt="Lumpia Basah" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-5 flex flex-col justify-between">
+                <div class="flex justify-between items-start">
+                    <div class="bg-red-600 text-white text-[7px] font-black px-2 py-1 rounded-full uppercase tracking-widest">New Menu</div>
+                    <span class="jam-badge">🕘 09.00 – 21.00</span>
+                </div>
+                <div>
+                    <h3 class="text-base font-black uppercase text-white group-hover:text-red-500 transition-colors">Lumpia Basah Nazzrul</h3>
+                    <p class="text-[8px] text-gray-300 uppercase font-bold tracking-[0.2em]">Legit & Gurih • 📍 Tarogong Kidul</p>
+                </div>
+            </div>
+        </a>
 
-</div>
+    </div>
 
     <footer class="mt-20 text-center border-t border-white/5 pt-8 pb-12">
         <p class="text-[9px] text-gray-600 uppercase tracking-[0.4em] font-bold">Managed & Developed by</p>
@@ -139,4 +131,5 @@
     </footer>
 
 </body>
-</html> 
+</html>
+ 
